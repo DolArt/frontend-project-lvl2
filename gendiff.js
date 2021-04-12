@@ -23,6 +23,5 @@ const genDiff = (file1Path, file2Path) => {
 
   return `{\n${resultArray.join('\n')}\n}`;
 };
-// '../hexlet/files/file1.json'
-// '../hexlet/files/file2.json'
+
 export default genDiff;
