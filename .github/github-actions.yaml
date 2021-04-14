@@ -1,0 +1,22 @@
+name: "linting and testing"
+
+on: push
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+
+      - name: "checking node version"
+        run: node -v
+
+      - name: "installing npm"
+        run: make install
+
+      - name: "linting"
+        run: make lint
+
+      - name: "testing"
+        run: make test
