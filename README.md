@@ -2,6 +2,7 @@
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/DolArt/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/DolArt/frontend-project-lvl2/actions)
+[![linting and testing](https://github.com/DolArt/frontend-project-lvl2/actions/workflows/github-actions.yaml/badge.svg)](https://github.com/DolArt/frontend-project-lvl2/actions/workflows/github-actions.yaml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3855617f72dd797ee1b5/maintainability)](https://codeclimate.com/github/DolArt/frontend-project-lvl2/maintainability)
 
 Сompare two json files and get a diff. 
