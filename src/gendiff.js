@@ -34,9 +34,9 @@ const genDiff = (file1Path, file2Path) => {
         };
       }
       return {
-        status: 'changed',
+        status: 'changed nested items',
         name: key,
-        value: getDiff(obj1[key], obj2[key]),
+        children: getDiff(obj1[key], obj2[key]),
       };
     });
   };
@@ -46,6 +46,6 @@ const genDiff = (file1Path, file2Path) => {
 
 export default genDiff;
 
-/* const a = '../__fixtures__/nested1.json';
+const a = '../__fixtures__/nested1.json';
 const b = '../__fixtures__/nested2.json';
-console.log(JSON.stringify(genDiff(a, b), null, '  ')); */
+console.log(JSON.stringify(genDiff(a, b), null, '  '));
