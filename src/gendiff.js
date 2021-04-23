@@ -2,9 +2,9 @@ import * as fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
 import parseData from './parsers.js';
-// import getObjectKeys from './getObjectKeys.js';
+import getStylishView from './stylishFormatter.js';
 
-const genDiff = (file1Path, file2Path) => {
+const genDiff = (file1Path, file2Path, stylishType = 'stylish') => {
   const file1 = fs.readFileSync(file1Path);
   const extension1 = path.extname(file1Path);
   const file2 = fs.readFileSync(file2Path);
@@ -41,11 +41,11 @@ const genDiff = (file1Path, file2Path) => {
     });
   };
 
-  return getDiff(data1, data2);
+  const diff = getDiff(data1, data2);
+  if (stylishType === 'stylish') {
+    return getStylishView(diff);
+  }
+  return diff;
 };
 
 export default genDiff;
-
-const a = '../__fixtures__/nested1.json';
-const b = '../__fixtures__/nested2.json';
-console.log(JSON.stringify(genDiff(a, b), null, '  '));

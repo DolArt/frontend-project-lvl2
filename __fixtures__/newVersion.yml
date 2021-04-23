@@ -14,6 +14,10 @@ group1:
   foo: bar
   baz: bars
   nest: str
+  userNames:
+    - Lora
+    - Mike
+    - Elena
 group3:
   deep:
     id:

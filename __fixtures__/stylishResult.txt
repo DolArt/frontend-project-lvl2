@@ -26,6 +26,11 @@
             key: value
         }
       + nest: str
+      + userNames: [
+            Lora
+            Mike
+            Elena
+        ]
     }
   - group2: {
         abc: 12345

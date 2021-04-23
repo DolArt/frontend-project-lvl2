@@ -18,7 +18,8 @@
   "group1": {
     "foo": "bar",
     "baz": "bars",
-    "nest": "str"
+    "nest": "str",
+    "userNames": ["Lora", "Mike", "Elena"]
   },
   "group3": {
     "deep": {
